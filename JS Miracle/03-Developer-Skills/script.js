@@ -8,6 +8,8 @@ function logger() {
     console.log(`my name is miracle`)
 }
 
+// this function don't produces any value
+
 logger();
 logger();
 logger();

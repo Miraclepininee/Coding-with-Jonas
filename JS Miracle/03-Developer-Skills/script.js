@@ -145,7 +145,7 @@ console.log(friends);
 friends.shift();// first element
 console.log(friends);
 
-//To get the index nuber of each Array
+//To get the index nuMber of each Array
 console.log(friends.indexOf('Aadity'));
 console.log(friends.indexOf());
 console.log(friends.indexOf('Bob'));
@@ -167,5 +167,16 @@ if (friends.includes('Aadity')) {
 }
 
 */
+
+
+// OBJECTS
+const miracle = {
+    firstName: 'Miracle',
+    lastName: 'Pininee',
+    age: 2024 - 2001,
+    job: 'student',
+    friends: ['Royal', 'Casey', 'Aadity', 'Hanafy']
+};
+
 
 

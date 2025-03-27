@@ -168,7 +168,7 @@ if (friends.includes('Aadity')) {
 
 */
 
-
+/*  ====================== OBJECTS ====================
 // OBJECTS
 const miracle = {
     firstName: 'Miracle',
@@ -178,5 +178,67 @@ const miracle = {
     friends: ['Royal', 'Casey', 'Aadity', 'Hanafy']
 };
 
+console.log(miracle);
+console.log(miracle.friend);
 
+console.log(miracle['firstName']);
+console.log(miracle['lastName']);
+
+const nameKey = 'Name';
+console.log(miracle['first' + nameKey]);
+console.log(miracle['last' + nameKey]);
+
+const inteestedIn = prompt('What do you want to know about Miracle? choose between firstName, lastName, age, job, and friends');
+if (miracle[inteestedIn]) {
+    console.log(miracle[inteestedIn]); 
+} else {
+    console.log('Wrong Request! Choose between firstName, lastName, age, job, and friend');
+};
+
+miracle.location = 'Nigeria';
+miracle['twitter'] = '@miracle';
+console.log(miracle);
+// Challenge
+// "Miracle has 4 friends, and his best friend is called Aadity"
+console.log(`${miracle.firstName} has ${miracle.friends.length} friends, and his best friend is called ${miracle.friends[2]}`);
+*/
+
+// ==================== OBJECT METHODS =========================
+
+const miracle = {
+    firstName: 'Miracle',
+    lastName: 'Pininee',
+    birthYear: 2001,
+    job: 'student',
+    friends: ['Royal', 'Casey', 'Aadity', 'Hanafy'],
+    hasDriversLicense: true,
+    
+    // calcAge: function (birthYear) {
+    //     return 2024 - birthYear;
+    // }
+
+    // calcAge: function () {
+    //     return 2024 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
+};
+    
+console.log(miracle.calcAge(2001));  //this is how to call the function inside the object
+console.log(miracle.calcAge(miracle.birthYear));
+console.log(miracle['calcAge'](miracle['birthYear']));
+console.log(miracle['calcAge'](miracle['birthYear']));
+console.log(miracle.calcAge(miracle.birthYear));
+console.log(miracle['calcAge'](miracle['birthYear']));
+console.log(miracle.age);
+
+// Challenge
+// "Miracle is a 23-year old student, and he has a/no driver's license"a
 

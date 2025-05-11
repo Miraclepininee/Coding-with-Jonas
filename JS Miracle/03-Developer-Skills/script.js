@@ -240,5 +240,16 @@ console.log(miracle['calcAge'](miracle['birthYear']));
 console.log(miracle.age);
 
 // Challenge
-// "Miracle is a 23-year old student, and he has a/no driver's license"a
+// "Miracle is a 23-year old student, and he has a/no driver's license"
+
+
+
+
+
+// the for loop
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+ 
 
